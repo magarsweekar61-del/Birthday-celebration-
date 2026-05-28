@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Special Surprise for Nidi</title>
+    <title>Happy Birthday Nidi - A Special Celebration</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -14,37 +14,19 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 50%, #0f1629 100%);
+            background: linear-gradient(135deg, #fafafa 0%, #f5f1ff 100%);
             min-height: 100vh;
             overflow-x: hidden;
             color: #333;
         }
 
-        /* Elegant Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #e63946;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #ff6b6b;
-        }
-
-        /* =============== PASSWORD SECTION =============== */
+        /* =============== PASSWORD PAGE =============== */
         .password-container {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             position: fixed;
             width: 100%;
             height: 100%;
@@ -54,22 +36,21 @@
         }
 
         .password-box {
-            background: rgba(255, 255, 255, 0.98);
+            background: white;
             padding: 60px 50px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(230, 57, 70, 0.2);
+            border-radius: 25px;
+            box-shadow: 0 30px 80px rgba(102, 126, 234, 0.2);
             text-align: center;
             max-width: 450px;
             width: 90%;
-            animation: slideInDown 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(230, 57, 70, 0.1);
+            animation: slideInDown 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border: 2px solid rgba(102, 126, 234, 0.1);
         }
 
         @keyframes slideInDown {
             from {
                 opacity: 0;
-                transform: translateY(-60px);
+                transform: translateY(-80px);
             }
             to {
                 opacity: 1;
@@ -79,17 +60,17 @@
 
         .password-box h1 {
             font-family: 'Playfair Display', serif;
-            color: #1a1a3e;
+            color: #667eea;
             margin-bottom: 15px;
-            font-size: 2.2em;
-            font-weight: 600;
+            font-size: 2.5em;
+            font-weight: 700;
             letter-spacing: 1px;
         }
 
         .password-box p {
-            color: #666;
+            color: #888;
             margin-bottom: 40px;
-            font-size: 1.05em;
+            font-size: 1.1em;
             font-weight: 300;
             letter-spacing: 0.5px;
         }
@@ -99,10 +80,10 @@
             padding: 16px 20px;
             font-size: 16px;
             border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            border-radius: 12px;
             margin-bottom: 25px;
             text-align: center;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             font-family: 'Poppins', sans-serif;
             transition: all 0.3s ease;
             background: #f9f9f9;
@@ -110,18 +91,18 @@
 
         .password-input:focus {
             outline: none;
-            border-color: #e63946;
+            border-color: #667eea;
             background: white;
-            box-shadow: 0 0 20px rgba(230, 57, 70, 0.15);
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
         }
 
         .unlock-btn {
-            background: linear-gradient(135deg, #e63946 0%, #ff6b6b 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 14px 40px;
+            padding: 15px 45px;
             border: none;
-            border-radius: 10px;
-            font-size: 1em;
+            border-radius: 12px;
+            font-size: 1.05em;
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 600;
@@ -130,158 +111,38 @@
         }
 
         .unlock-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.3);
-        }
-
-        .unlock-btn:active {
-            transform: translateY(-1px);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
         }
 
         .error-message {
-            color: #e63946;
+            color: #e74c3c;
             margin-top: 15px;
             display: none;
             font-weight: 500;
-            font-size: 0.95em;
         }
 
-        /* =============== MAIN CONTENT =============== */
-        .content {
+        /* =============== PAGE CONTAINER =============== */
+        .page {
             display: none;
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .content.show {
-            display: block;
-        }
-
-        /* =============== SPIDERMAN ANIMATION =============== */
-        .spiderman-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 100;
-            display: none;
-        }
-
-        .spiderman {
-            position: absolute;
-            top: -50px;
-            right: 10%;
-            width: 60px;
-            height: 60px;
-            font-size: 4em;
-            animation: swing 4s ease-in-out infinite;
-        }
-
-        @keyframes swing {
-            0% {
-                transform: translateX(0) translateY(0) rotate(0deg);
-            }
-            25% {
-                transform: translateX(50px) translateY(100px) rotate(15deg);
-            }
-            50% {
-                transform: translateX(0) translateY(200px) rotate(0deg);
-            }
-            75% {
-                transform: translateX(-50px) translateY(100px) rotate(-15deg);
-            }
-            100% {
-                transform: translateX(0) translateY(0) rotate(0deg);
-            }
-        }
-
-        .chat-bubble {
-            position: absolute;
-            background: white;
-            padding: 12px 18px;
-            border-radius: 15px;
-            font-weight: 600;
-            font-size: 0.9em;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            white-space: nowrap;
-            animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        @keyframes popIn {
-            from {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .chat-bubble.wave {
-            animation: wave 2s ease-in-out infinite;
-            animation-delay: 0.5s;
-        }
-
-        @keyframes wave {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(20deg); }
-            75% { transform: rotate(-20deg); }
-        }
-
-        /* =============== SECTION STYLING =============== */
-        .section {
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             padding: 60px 30px;
+            animation: fadeIn 0.8s ease-out;
             position: relative;
             overflow: hidden;
         }
 
-        .section:nth-child(odd) {
-            background: rgba(255, 255, 255, 0.98);
+        .page.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .section:nth-child(even) {
-            background: linear-gradient(135deg, rgba(15, 22, 41, 0.95) 0%, rgba(26, 26, 62, 0.95) 100%);
-        }
-
-        /* =============== FIRST MESSAGE SECTION =============== */
-        .message-section {
-            max-width: 900px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .main-greeting {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, #e63946 0%, #ff6b6b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes fadeInUp {
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -289,153 +150,177 @@
             }
         }
 
-        /* =============== PHOTO ALBUM SECTION =============== */
-        .album-container {
+        /* =============== BACKGROUND GRADIENTS =============== */
+        .page-1 {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f1ff 100%);
+        }
+
+        .page-2 {
+            background: linear-gradient(135deg, #fff5e6 0%, #fff9f0 100%);
+        }
+
+        .page-3 {
+            background: linear-gradient(135deg, #e6f7ff 0%, #f0f4ff 100%);
+        }
+
+        .page-4 {
+            background: linear-gradient(135deg, #f5e6ff 0%, #ffe6f7 100%);
+        }
+
+        .page-5 {
+            background: linear-gradient(135deg, #e6ffe6 0%, #f0fff5 100%);
+        }
+
+        /* =============== STICKERS & DECORATIONS =============== */
+        .sticker {
+            position: absolute;
+            opacity: 0.3;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .sticker-1 { top: 10%; left: 5%; font-size: 4em; animation-delay: 0s; }
+        .sticker-2 { top: 15%; right: 8%; font-size: 3.5em; animation-delay: 1s; }
+        .sticker-3 { bottom: 15%; left: 8%; font-size: 3.8em; animation-delay: 2s; }
+        .sticker-4 { bottom: 10%; right: 5%; font-size: 4.2em; animation-delay: 1.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(3deg); }
+        }
+
+        /* =============== CONTENT STYLING =============== */
+        .page-content {
+            max-width: 800px;
             width: 100%;
-            max-width: 1000px;
-            margin-bottom: 50px;
+            text-align: center;
+            z-index: 10;
+            animation: slideUp 0.8s ease-out;
         }
 
-        .section-label {
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            font-weight: 600;
-            margin-bottom: 40px;
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             letter-spacing: 1px;
-            color: #1a1a3e;
         }
 
-        .section:nth-child(even) .section-label {
-            color: #fff;
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.6;
         }
 
+        /* =============== PHOTO GRID =============== */
         .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 25px;
-            margin-bottom: 40px;
+            margin-top: 40px;
+            width: 100%;
         }
 
         .photo-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(230, 57, 70, 0.1);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.1);
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             cursor: pointer;
-        }
-
-        .section:nth-child(even) .photo-card {
-            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(0);
         }
 
         .photo-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 15px 45px rgba(230, 57, 70, 0.2);
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(102, 126, 234, 0.2);
         }
 
         .photo-placeholder {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3.5em;
-            color: #ddd;
             position: relative;
             overflow: hidden;
         }
 
         .photo-placeholder::before {
             content: '📸';
-            animation: float 3s ease-in-out infinite;
+            animation: bounce 2s ease-in-out infinite;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
 
         .photo-message {
             padding: 20px;
+            background: white;
         }
 
         .photo-message h3 {
-            color: #e63946;
+            color: #667eea;
             margin-bottom: 8px;
-            font-size: 1em;
             font-weight: 600;
         }
 
         .photo-message p {
-            color: #666;
+            color: #999;
             font-size: 0.9em;
-            line-height: 1.5;
-            font-weight: 300;
+            font-style: italic;
         }
 
-        /* =============== WISHES SECTION =============== */
-        .wishes-section {
-            width: 100%;
-            max-width: 900px;
-        }
-
-        .next-button {
-            background: linear-gradient(135deg, #e63946 0%, #ff6b6b 100%);
-            color: white;
-            padding: 16px 50px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.05em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            letter-spacing: 1px;
-            font-family: 'Poppins', sans-serif;
-            margin: 40px 0;
-        }
-
-        .next-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.3);
-        }
-
+        /* =============== WISHES GRID =============== */
         .wishes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-top: 30px;
+            margin-top: 40px;
+            width: 100%;
         }
 
         .wish-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid #e63946;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.1);
+            border-left: 5px solid #667eea;
             transition: all 0.3s ease;
-        }
-
-        .section:nth-child(even) .wish-card {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
+            position: relative;
         }
 
         .wish-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(230, 57, 70, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.15);
         }
 
         .wish-card h3 {
-            color: #e63946;
+            color: #667eea;
             margin-bottom: 15px;
             font-weight: 600;
-        }
-
-        .section:nth-child(even) .wish-card h3 {
-            color: #ff6b6b;
+            font-size: 1.1em;
         }
 
         .wish-card p {
@@ -443,92 +328,113 @@
             font-size: 0.95em;
             line-height: 1.6;
             font-weight: 300;
-            margin-bottom: 15px;
-        }
-
-        .section:nth-child(even) .wish-card p {
-            color: rgba(255, 255, 255, 0.85);
         }
 
         .placeholder-text {
             font-style: italic;
-            opacity: 0.7;
+            opacity: 0.6;
             font-size: 0.9em;
         }
 
-        /* =============== AUDIO MESSAGE SECTION =============== */
-        .audio-section {
-            width: 100%;
-            max-width: 800px;
-        }
-
+        /* =============== AUDIO SECTION =============== */
         .audio-card {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .section:nth-child(odd) .audio-card {
-            background: rgba(230, 57, 70, 0.05);
-            border: 2px solid rgba(230, 57, 70, 0.1);
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.1);
+            max-width: 600px;
+            width: 100%;
         }
 
         .audio-label {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 20px;
             font-weight: 600;
-            color: #e63946;
+            color: #667eea;
         }
 
-        .section:nth-child(even) .audio-label {
-            color: #ff6b6b;
+        .message-text {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            font-weight: 300;
         }
 
         .audio-placeholder {
-            background: rgba(230, 57, 70, 0.1);
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 15px;
             margin-top: 20px;
-            color: #666;
-            font-size: 0.95em;
-            line-height: 1.6;
-        }
-
-        .section:nth-child(even) .audio-placeholder {
-            background: rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* =============== FOOTER MESSAGE =============== */
-        .footer-message {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
-            margin-top: 50px;
-            font-weight: 600;
-            color: #666;
-            text-align: center;
-            line-height: 1.6;
-            max-width: 600px;
-        }
-
-        .section:nth-child(even) .footer-message {
-            color: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+            font-weight: 500;
         }
 
         .signature {
             margin-top: 40px;
             font-family: 'Playfair Display', serif;
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-style: italic;
-            color: #e63946;
+            color: #764ba2;
         }
 
-        .section:nth-child(even) .signature {
-            color: #ff6b6b;
+        /* =============== NAVIGATION =============== */
+        .nav-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 50;
+            animation: slideUp 0.8s ease-out 0.3s both;
+        }
+
+        .nav-btn {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .progress-dots {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #667eea;
+            width: 30px;
+            border-radius: 6px;
         }
 
         /* =============== MOBILE RESPONSIVE =============== */
@@ -538,14 +444,18 @@
             }
 
             .password-box h1 {
-                font-size: 1.8em;
-            }
-
-            .main-greeting {
                 font-size: 2em;
             }
 
-            .section {
+            .main-title {
+                font-size: 2.2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .page {
                 padding: 40px 20px;
             }
 
@@ -554,49 +464,31 @@
                 gap: 15px;
             }
 
-            .photo-placeholder {
-                height: 150px;
-            }
-
             .wishes-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section-label {
-                font-size: 1.5em;
+            .audio-card {
+                padding: 30px;
             }
 
-            .footer-message {
-                font-size: 1.3em;
+            .nav-buttons {
+                bottom: 20px;
+                gap: 10px;
+            }
+
+            .nav-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
             }
         }
 
-        /* =============== ANIMATIONS =============== */
-        .sticker {
-            position: fixed;
-            font-size: 3em;
-            opacity: 0.6;
-            pointer-events: none;
-            z-index: 5;
-            animation: float-sticker 6s ease-in-out infinite;
-        }
-
-        @keyframes float-sticker {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-
-        .sticker-1 { top: 10%; left: 5%; animation-delay: 0s; }
-        .sticker-2 { top: 20%; right: 5%; animation-delay: 1s; }
-        .sticker-3 { bottom: 20%; left: 8%; animation-delay: 2s; }
-        .sticker-4 { bottom: 10%; right: 5%; animation-delay: 1.5s; }
-
-        /* Confetti for celebrations */
-        .confetti-piece {
+        /* =============== CONFETTI ANIMATION =============== */
+        .confetti {
             position: fixed;
             width: 10px;
             height: 10px;
-            background: #e63946;
+            background: #667eea;
             pointer-events: none;
             z-index: 99;
             animation: confetti-fall 3s ease-in forwards;
@@ -608,46 +500,15 @@
                 opacity: 0;
             }
         }
-
-        /* Web animations */
-        .web-accent {
-            position: absolute;
-            font-size: 2em;
-            opacity: 0.15;
-            pointer-events: none;
-        }
-
-        .web-accent-1 { top: 5%; left: 5%; }
-        .web-accent-2 { top: 10%; right: 5%; }
-        .web-accent-3 { bottom: 10%; left: 3%; }
-        .web-accent-4 { bottom: 5%; right: 8%; }
     </style>
 </head>
 <body>
 
-    <!-- Stickers decoration -->
-    <div class="sticker sticker-1">🕷️</div>
-    <div class="sticker sticker-2">✨</div>
-    <div class="sticker sticker-3">🎂</div>
-    <div class="sticker sticker-4">💫</div>
-
-    <!-- Web accents -->
-    <div class="web-accent web-accent-1">🕸️</div>
-    <div class="web-accent web-accent-2">🕸️</div>
-    <div class="web-accent web-accent-3">🕸️</div>
-    <div class="web-accent web-accent-4">🕸️</div>
-
-    <!-- Spiderman Animation Container -->
-    <div class="spiderman-container" id="spidermanContainer">
-        <div class="spiderman" id="spiderman">🕷️</div>
-        <div class="chat-bubble wave" id="chatBubble" style="top: 100px; right: 15%; display: none;">Hi! 👋</div>
-    </div>
-
-    <!-- PASSWORD SECTION -->
+    <!-- PASSWORD PAGE -->
     <div class="password-container" id="passwordContainer">
         <div class="password-box">
             <h1>Enter Password</h1>
-            <p>Unlock your surprise</p>
+            <p>Unlock your special surprise</p>
             <input 
                 type="password" 
                 class="password-input" 
@@ -660,26 +521,39 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div class="content" id="mainContent">
-        
-        <!-- SECTION 1: FIRST MESSAGE -->
-        <div class="section">
-            <div class="message-section">
-                <h1 class="main-greeting">Happy Birthday to the Prettiest and Best Spider Girl</h1>
+    <!-- PAGES CONTAINER -->
+    <div id="pagesContainer" style="display:none;">
+        <!-- PAGE 1: GREETING -->
+        <div class="page page-1" id="page1">
+            <div class="sticker sticker-1">🕷️</div>
+            <div class="sticker sticker-2">🌸</div>
+            <div class="sticker sticker-3">✨</div>
+            <div class="sticker sticker-4">🎂</div>
+
+            <div class="page-content">
+                <h1 class="main-title">Happy Birthday, Nidi!</h1>
+                <p class="subtitle">The prettiest and best spider girl 🕷️</p>
+                <p class="subtitle" style="font-size: 1.1em; margin-top: 40px;">You da the real topper and I love the memories I built with you tuition buddy 📚</p>
             </div>
         </div>
 
-        <!-- SECTION 2: PHOTO ALBUM -->
-        <div class="section">
-            <div class="album-container">
-                <h2 class="section-label">Our Amazing Memories</h2>
+        <!-- PAGE 2: PHOTO ALBUM -->
+        <div class="page page-2" id="page2">
+            <div class="sticker sticker-1">📸</div>
+            <div class="sticker sticker-2">🌺</div>
+            <div class="sticker sticker-3">💫</div>
+            <div class="sticker sticker-4">🎨</div>
+
+            <div class="page-content">
+                <h2 class="main-title">Our Amazing Memories</h2>
+                <p class="subtitle">Beautiful moments we've shared together ✨</p>
+                
                 <div class="photo-grid">
                     <div class="photo-card">
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #1</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
 
@@ -687,7 +561,7 @@
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #2</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
 
@@ -695,7 +569,7 @@
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #3</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
 
@@ -703,7 +577,7 @@
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #4</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
 
@@ -711,7 +585,7 @@
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #5</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
 
@@ -719,7 +593,7 @@
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #6</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
 
@@ -727,7 +601,7 @@
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #7</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
 
@@ -735,7 +609,7 @@
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #8</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
 
@@ -743,7 +617,7 @@
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #9</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
 
@@ -751,73 +625,95 @@
                         <div class="photo-placeholder"></div>
                         <div class="photo-message">
                             <h3>Memory #10</h3>
-                            <p class="placeholder-text">[Photo and caption will be added]</p>
+                            <p class="placeholder-text">Photo & caption</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- SECTION 3: FRIENDS WISHES -->
-        <div class="section">
-            <div class="wishes-section">
-                <h2 class="section-label">Birthday Wishes from Friends</h2>
+        <!-- PAGE 3: FRIENDS WISHES -->
+        <div class="page page-4" id="page3">
+            <div class="sticker sticker-1">🎉</div>
+            <div class="sticker sticker-2">🌹</div>
+            <div class="sticker sticker-3">💝</div>
+            <div class="sticker sticker-4">🎊</div>
+
+            <div class="page-content">
+                <h2 class="main-title">Birthday Wishes</h2>
+                <p class="subtitle">Special messages from your friends 💕</p>
                 
                 <div class="wishes-grid">
                     <div class="wish-card">
                         <h3>🎉 Friend's Wish #1</h3>
-                        <p class="placeholder-text">[Text, video, or audio message will be added]</p>
+                        <p class="placeholder-text">[Message, video link or audio will be added]</p>
                     </div>
 
                     <div class="wish-card">
                         <h3>🎉 Friend's Wish #2</h3>
-                        <p class="placeholder-text">[Text, video, or audio message will be added]</p>
+                        <p class="placeholder-text">[Message, video link or audio will be added]</p>
                     </div>
 
                     <div class="wish-card">
                         <h3>🎉 Friend's Wish #3</h3>
-                        <p class="placeholder-text">[Text, video, or audio message will be added]</p>
+                        <p class="placeholder-text">[Message, video link or audio will be added]</p>
                     </div>
 
                     <div class="wish-card">
                         <h3>🎉 Friend's Wish #4</h3>
-                        <p class="placeholder-text">[Text, video, or audio message will be added]</p>
+                        <p class="placeholder-text">[Message, video link or audio will be added]</p>
                     </div>
 
                     <div class="wish-card">
                         <h3>🎉 Friend's Wish #5</h3>
-                        <p class="placeholder-text">[Text, video, or audio message will be added]</p>
+                        <p class="placeholder-text">[Message, video link or audio will be added]</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- SECTION 4: YOUR AUDIO MESSAGE -->
-        <div class="section">
-            <div class="audio-section">
-                <h2 class="section-label">A Special Message From Me</h2>
-                
+        <!-- PAGE 4: YOUR MESSAGE -->
+        <div class="page page-5" id="page4">
+            <div class="sticker sticker-1">💚</div>
+            <div class="sticker sticker-2">🌿</div>
+            <div class="sticker sticker-3">✨</div>
+            <div class="sticker sticker-4">🎵</div>
+
+            <div class="page-content">
                 <div class="audio-card">
-                    <div class="audio-label">🎵 Listen to My Message</div>
-                    <p style="color: #666; margin-bottom: 20px;">
-                        <span style="color: #e63946; font-weight: 600;">Always grateful for having you in my life and thank you for everything</span>
+                    <h2 class="audio-label">A Special Message From Me 🎵</h2>
+                    <p class="message-text" style="color: #667eea; font-weight: 600; margin-bottom: 30px;">
+                        Always grateful for having you in my life and thank you for everything ❤️
                     </p>
                     <div class="audio-placeholder">
                         [Your audio message will be embedded here]
                     </div>
-                </div>
-
-                <div class="footer-message">
-                    You mean the world to me, and I'm so glad we share this special bond.
+                    <p class="message-text" style="margin-top: 40px;">
+                        You mean the world to me, and I'm so glad we share this special bond.
+                    </p>
                     <div class="signature">— Not Your Friend Btw</div>
                 </div>
             </div>
         </div>
 
+        <!-- NAVIGATION -->
+        <div class="progress-dots">
+            <div class="dot active" onclick="goToPage(0)"></div>
+            <div class="dot" onclick="goToPage(1)"></div>
+            <div class="dot" onclick="goToPage(2)"></div>
+            <div class="dot" onclick="goToPage(3)"></div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn" id="prevBtn" onclick="previousPage()">← Previous</button>
+            <button class="nav-btn" id="nextBtn" onclick="nextPage()">Next →</button>
+        </div>
     </div>
 
     <script>
         const CORRECT_PASSWORD = "20670228";
+        let currentPage = 0;
+        const totalPages = 4;
 
         function handleKeyPress(event) {
             if (event.key === "Enter") {
@@ -832,17 +728,15 @@
             if (input === CORRECT_PASSWORD) {
                 errorMessage.style.display = "none";
                 
-                // Hide password container and show main content
+                // Hide password container
                 document.getElementById("passwordContainer").style.display = "none";
-                document.getElementById("mainContent").classList.add("show");
-                
-                // Show spiderman animation
-                showSpidermanAnimation();
+                document.getElementById("pagesContainer").style.display = "block";
                 
                 // Trigger celebration
-                setTimeout(() => {
-                    triggerCelebration();
-                }, 500);
+                triggerCelebration();
+                
+                // Show first page
+                showPage(0);
             } else {
                 errorMessage.style.display = "block";
                 document.getElementById("passwordInput").value = "";
@@ -850,41 +744,54 @@
             }
         }
 
-        function showSpidermanAnimation() {
-            const container = document.getElementById("spidermanContainer");
-            container.style.display = "block";
-            
-            const chatBubble = document.getElementById("chatBubble");
-            setTimeout(() => {
-                chatBubble.style.display = "block";
-            }, 1000);
+        function showPage(pageNum) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
 
-            // Add fun messages
-            const messages = ["Hi! 👋", "Happy Birthday! 🎉", "You're awesome! ⭐"];
-            let messageIndex = 0;
+            // Show current page
+            document.getElementById(`page${pageNum + 1}`).classList.add('active');
 
-            setInterval(() => {
-                if (messageIndex < messages.length) {
-                    chatBubble.textContent = messages[messageIndex];
-                    messageIndex++;
+            // Update dots
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === pageNum) {
+                    dot.classList.add('active');
                 } else {
-                    messageIndex = 0;
+                    dot.classList.remove('active');
                 }
-            }, 3000);
+            });
 
-            // Hide animation after 8 seconds
-            setTimeout(() => {
-                container.style.display = "none";
-            }, 8000);
+            // Update buttons
+            document.getElementById('prevBtn').disabled = pageNum === 0;
+            document.getElementById('nextBtn').disabled = pageNum === totalPages - 1;
+
+            currentPage = pageNum;
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages - 1) {
+                showPage(currentPage + 1);
+            }
+        }
+
+        function previousPage() {
+            if (currentPage > 0) {
+                showPage(currentPage - 1);
+            }
+        }
+
+        function goToPage(pageNum) {
+            showPage(pageNum);
         }
 
         function triggerCelebration() {
-            for (let i = 0; i < 60; i++) {
+            for (let i = 0; i < 50; i++) {
                 const confetti = document.createElement("div");
-                confetti.className = "confetti-piece";
+                confetti.className = "confetti";
                 confetti.style.left = Math.random() * 100 + "%";
                 confetti.style.top = "-20px";
-                confetti.style.background = Math.random() > 0.5 ? "#e63946" : "#ff6b6b";
+                confetti.style.background = Math.random() > 0.5 ? "#667eea" : "#764ba2";
                 confetti.style.animationDelay = Math.random() * 0.5 + "s";
                 document.body.appendChild(confetti);
 
@@ -892,9 +799,17 @@
             }
         }
 
-        // Prevent opening password container after unlocked
+        // Initialize password field focus
         window.addEventListener("load", () => {
             document.getElementById("passwordInput").focus();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById("pagesContainer").style.display !== "none") {
+                if (e.key === "ArrowRight") nextPage();
+                if (e.key === "ArrowLeft") previousPage();
+            }
         });
     </script>
 
